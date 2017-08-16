@@ -1,0 +1,35 @@
+//Main
+int main(int argc, char *argv[])
+{
+	if(argc != 3){
+		printf("Uso: usuarios monedas\n");
+	}
+	int usuarios = atoi(argv[1]);
+	double dineroSimulador;
+	double monedas = atoi(argv[2]);
+	double monedaSaved = monedas;
+
+	// struct rec *data;
+	// data = readFile("settings.csv");
+	// printf("%s\n", data);
+
+	while(monedas > 0){
+		double dinero = simulador(10,1);
+		monedas = monedas - 1;
+		if (monedas <= 0){
+			printf("Usuarios: %d\n", usuarios);
+			usuarios = usuarios - 1;
+			monedas = monedaSaved;
+			//Crear de nuevo puntero y asignarle nuevo espacio de memoria
+			double *money;
+			money = (double *)malloc(sizeof(double));
+			*money = 0;
+		}
+		if(usuarios <= 0){
+			printf("Finalizo \n");
+			break;
+		}
+	}
+
+	return 0;
+}
